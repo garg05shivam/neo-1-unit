@@ -1,0 +1,89 @@
+QUESTION 1
+
+
+import java.util.Scanner;
+
+class DecimalRounding {
+// You are using Java
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        double b=sc.nextDouble();
+        int a=sc.nextInt();
+        switch(a){
+        case 1:
+            System.out.printf("Rounded to the nearest whole number: %.1f",(double)Math.round(b));
+            break;
+            case 2:
+            System.out.printf("Rounded to one decimal place: %.1f",Math.round(b*10.0)/10.0);
+                break;
+                case 3:
+            System.out.printf("Rounded to two decimal places: %.2f",Math.round(b*100.0)/100.0);
+                    break;
+                    default:
+                    System.out.printf("Invalid choice.");
+                    break;
+        
+    }
+    }
+}
+
+
+
+QUESTION 2
+  
+  import java.util.Scanner;
+
+class Main {
+  // You are using Java
+    public static void main(String[] args) {
+        //Type your code here
+        Scanner kh=new Scanner(System.in);
+        int number[]=new int[5];
+        for(int i=0;i<5;i++){
+            number[i]=kh.nextInt();
+        }
+        int max=number[0];
+        int min=number[0];
+        for(int i=0;i<5;i++){
+            if(number[i]>max){
+                max=number[i];
+            }
+        }
+        for(int i=0;i<5;i++){
+            if(number[i]<min){
+                min=number[i];
+            }
+        }
+        System.out.println("Largest: "+max);
+        System.out.println("Smallest: "+min);
+    }
+
+
+
+
+QUESTION 3
+
+import java.util.Scanner;
+
+class Main {
+// You are using Java
+    public static void main(String[] args) {
+        //Type your code here
+        Scanner kh=new Scanner(System.in);
+        int a=kh.nextInt();
+        int b=kh.nextInt();
+        int c=kh.nextInt();
+        if(a==b && b==c){
+            System.out.println("The triangle is Equilateral");
+        }
+        else if(a==b || b==c || a==c ){
+            System.out.println("The triangle is isosceles");
+        }
+        else{
+            System.out.println("The triangle is scalene");
+        }
+        if(a*a + b*b ==c*c || a*a+c*c==b*b || b*b+c*c==a*a){
+            System.out.println("The triangle is also right-angled");
+            
+        }
+    }
